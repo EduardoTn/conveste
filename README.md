@@ -73,13 +73,13 @@ Você deve criar uma função `enrich_order(order: dict) -> dict` que:
 Responda às seguintes perguntas diretamente neste arquivo (README.md):
 
 1. Que problemas você antecipa ao integrar os dois módulos?
-# Resposta: O maior problema seria em manter um bom desempenho e uma boa observabilidade entre os módulos.
+Resposta: O maior problema seria em manter um bom desempenho e uma boa observabilidade entre os módulos.
 2. Como garantiria **consistência de dados** entre os serviços, considerando que o envio de mensagens é assíncrono?
-# Resposta: O ideal seria implementar um sistema de filas para os serviços, garantindo que os dados não tenha perca de sequencia em alto numero de requisições.
+Resposta: O ideal seria implementar um sistema de filas para os serviços, garantindo que os dados não tenha perca de sequencia em alto numero de requisições.
 3. Como garantiria **observabilidade** (ex: logs e rastreabilidade)?
-# Resposta: Para cada evento de erro, seria ideal emitir um log de erro e centralizar em algum serviço externo, como o "new relic" por exemplo.
+Resposta: Para cada evento de erro, seria ideal emitir um log de erro e centralizar em algum serviço externo, como o "new relic" por exemplo.
 4. Como prepararia esse sistema para escalar horizontalmente sem perder rastreabilidade e tolerância a falhas?
-# Resposta: Configuração do "nginx" como proxy reverso para balanceamento de carga, garantindo que os headers de rastreabilidade não sejam perdidos.
+Resposta: Configuração do "nginx" como proxy reverso para balanceamento de carga, garantindo que os headers de rastreabilidade não sejam perdidos.
 
 ---
 
